@@ -74,8 +74,7 @@ const Intro = () => {
           </p>
           <p className="text-[#1C2024] text-sm sm:text-base leading-relaxed mb-4">
             Glovest is a next-generation financial app by <span className="font-semibold text-[#1C2024]">Global Financial Investment</span>,
-            designed to simplify how poeple and businesses manage money across borders. Whether you're an individual sending funds to family,
-            a freelancer working with global clients, or a small business handling international payments.
+            designed to simplify how poeple and businesses manage money across borders.
           </p>
 
           <p className="text-[#1C2024] text-sm sm:text-base leading-relaxed mb-4"> Whether you're sending funds to family,
