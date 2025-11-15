@@ -79,7 +79,16 @@ const Hero = () => {
           {/* Join Waitlist Input */}
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col sm:flex-row items-center sm:items-stretch bg-[#4F3422] rounded-xl overflow-hidden border border-gray-300 max-w-sm mx-auto md:mx-0"
+            className="
+              flex items-stretch
+              bg-[#4F3422]
+              rounded-lg sm:rounded-lg
+              overflow-hidden
+              w-full max-w-sm
+              mx-auto md:mx-0
+              transition-transform duration-300
+              hover:scale-[1.02]
+            "
           >
             <input
               type="email"
@@ -88,16 +97,41 @@ const Hero = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               disabled={loading}
-              className="flex-grow px-4 bg-[#4F3422] py-3 text-gray-100 text-sm rounded-2xl placeholder:text-gray-400 focus:outline-none w-full sm:w-auto disabled:opacity-50"
+              className="
+                flex-grow
+                px-3 py-2
+                sm:px-4 sm:py-3
+                bg-[#4F3422]
+                text-gray-100
+                placeholder:text-gray-400
+                text-xs sm:text-sm
+                focus:outline-none
+                disabled:opacity-50
+              "
             />
+
             <button
               type="submit"
               disabled={loading}
-              className="bg-[#FFBA18] text-[#4F3422] sm:px-6 sm:py-3 px-4 py-2 text-xs rounded-xl sm:text-sm font-semibold sm:border-0 sm:border-2 border-2 border-[#4F3422] hover:bg-white hover:text-black transition-all duration-300 w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
+              className="
+                bg-[#FFBA18] text-[#4F3422]
+                px-2 py-3
+                sm:px-6 sm:py-3
+                text-xs sm:text-sm
+                font-semibold
+                border-2 border-[#4F3422]
+                rounded-lg sm:rounded-lg
+                whitespace-nowrap
+                flex-shrink-0
+                hover:bg-white hover:text-black
+                transition-all duration-300
+                disabled:opacity-50 disabled:cursor-not-allowed
+              "
             >
               {loading ? "Joining..." : "Join waitlist"}
             </button>
           </form>
+
 
           {message && (
             <p className={`text-xs mt-2 text-center md:text-left ${message.includes("added") ? "text-green-700" : "text-red-700"}`}>

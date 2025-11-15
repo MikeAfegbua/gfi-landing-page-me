@@ -4,11 +4,13 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import PrivacyPolicy from "./pages/Privacy";
 import TermsOfService from "./pages/Terms";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   return (
     <Router>
       <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />

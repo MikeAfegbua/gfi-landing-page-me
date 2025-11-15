@@ -62,9 +62,12 @@ const JoinWaitlist = () => {
 
         {/* Email Input */}
         <form onSubmit={handleSubmit}>
-          <div className="flex flex-col sm:flex-row items-center 
-          bg-[#646464] rounded-lg overflow-hidden w-full max-w-xs sm:max-w-sm 
-          mx-auto md:mx-0 transition-transform duration-300 hover:scale-[1.02]">
+          <div
+            className="flex flex-row items-center 
+            bg-[#646464] rounded-lg overflow-hidden 
+            w-full max-w-sm 
+            mx-auto md:mx-0 transition-transform duration-300 hover:scale-[1.02]"
+          >
             <input
               type="email"
               name="newsletter subscription"
@@ -72,28 +75,53 @@ const JoinWaitlist = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               disabled={loading}
-              className="flex-grow w-auto px-4 py-3 bg-[#646464] text-gray-100 placeholder-gray-300 
-              text-sm focus:outline-none disabled:opacity-50"
+              className="
+                flex-grow 
+                px-3 py-2          
+                sm:px-4 sm:py-3    
+                bg-[#646464] 
+                text-gray-100 
+                placeholder-gray-300 
+                text-xs sm:text-sm  
+                focus:outline-none 
+                disabled:opacity-50
+              "
             />
+
             <motion.button
               type="submit"
               disabled={loading}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-[#1A1A1A] text-white w-full sm:w-auto px-6 py-3 
-              text-sm font-semibold border-2 border-[#646464] rounded-xl 
-              hover:bg-white hover:text-black transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="
+                bg-[#1A1A1A] text-white 
+                px-2 py-3           
+                sm:px-6 sm:py-3    
+                text-xs sm:text-sm 
+                font-semibold 
+                border-2 border-[#646464] 
+                rounded-lg 
+                hover:bg-white hover:text-black 
+                transition-all duration-300 
+                disabled:opacity-50 disabled:cursor-not-allowed
+                mt-0
+              "
             >
               {loading ? "Joining..." : "Join waitlist"}
             </motion.button>
           </div>
 
           {message && (
-            <p className={`text-xs mt-2 text-center md:text-left ${message.includes("added") ? "text-green-400" : "text-red-400"}`}>
+            <p
+              className={`text-xs mt-2 text-center md:text-left ${
+                message.includes("added") ? "text-green-400" : "text-red-400"
+              }`}
+            >
               {message}
             </p>
           )}
         </form>
+
       </motion.div>
 
       {/* Right Side Image */}

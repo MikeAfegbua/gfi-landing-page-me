@@ -96,7 +96,7 @@ const Footer = () => {
 
             {/* Email and Phone */}
             <a
-              href="mailto:dausabstephanie3@gmail.com?subject=Greetings%20to%20GFI&body=Hello,%20I%20would%20like%20to..."
+              href="mailto:dausabstephanie3@gmail.com?subject=Inquiry%20to%20GFI&body=Hello,%20I%20would%20like%20to..."
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#1C2024] hover:text-[#1C2024] hover:underline hover:translate-x-1 transition-transform duration-200"
@@ -141,35 +141,67 @@ const Footer = () => {
           transition={{ delay: 0.4, duration: 0.7 }}
         >
           <form onSubmit={handleSubmit} className="w-full">
-            <motion.div
-              className="flex flex-col sm:flex-row items-stretch bg-[#4F3422] rounded-lg overflow-hidden w-full max-w-sm transition-transform duration-300 hover:scale-[1.02]"
-            >
-              <input
-                type="email"
-                name="newsletter subscription"
-                placeholder="Enter email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                disabled={loading}
-                className="flex-grow px-4 py-3 bg-[#4F3422] text-white placeholder:text-gray-300 rounded-xl text-sm focus:outline-none w-full sm:w-auto disabled:opacity-50"
-              />
-              <motion.button
-                type="submit"
-                disabled={loading}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-[#FFBA18] text-[#4F3422] px-6 py-3 text-sm font-semibold rounded-xl sm:rounded-xl border-2 border-[#4F3422] hover:bg-white hover:text-black transition-all duration-300 mt-3 sm:mt-0 disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {loading ? "Joining..." : "Join waitlist"}
-              </motion.button>
-            </motion.div>
+          <motion.div
+            className="
+              flex flex-row items-center 
+              bg-[#4F3422] rounded-lg overflow-hidden 
+              w-full max-w-sm mx-auto md:mx-0
+              transition-transform duration-300 hover:scale-[1.02]
+            "
+          >
+            <input
+              type="email"
+              name="newsletter subscription"
+              placeholder="Enter email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              disabled={loading}
+              className="
+                flex-grow 
+                px-3 py-2   
+                sm:px-4 sm:py-3  
+                bg-[#4F3422] 
+                text-white 
+                placeholder-gray-300 
+                text-xs sm:text-sm  
+                focus:outline-none 
+                disabled:opacity-50
+              "
+            />
 
-            {message && (
-              <p className={`text-xs mt-2 ${message.includes("added") ? "text-green-700" : "text-red-700"}`}>
-                {message}
-              </p>
-            )}
-          </form>
+            <motion.button
+              type="submit"
+              disabled={loading}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className=" w-full
+                bg-[#FFBA18] text-[#4F3422]
+                px-1 py-3           
+                sm:px-6 sm:py-3     
+                text-xs sm:text-sm  
+                font-semibold 
+                border-2 border-[#4F3422] 
+                rounded-lg
+                hover:bg-white hover:text-black 
+                transition-all duration-300 
+                disabled:opacity-50 disabled:cursor-not-allowed
+                mt-0
+              "
+            >
+              {loading ? "Joining..." : "Join waitlist"}
+            </motion.button>
+          </motion.div>
+
+          {message && (
+            <p
+              className={`text-xs mt-2 ${
+                message.includes("added") ? "text-green-700" : "text-red-700"
+              }`}
+            >
+              {message}
+            </p>
+          )}
+        </form>
         </motion.div>
       </div>
     </motion.footer>
