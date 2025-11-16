@@ -174,7 +174,7 @@ const Footer = () => {
               disabled={loading}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className=" w-full
+              className="
                 bg-[#FFBA18] text-[#4F3422]
                 px-1 py-3           
                 sm:px-6 sm:py-3     

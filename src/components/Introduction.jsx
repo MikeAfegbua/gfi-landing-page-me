@@ -28,7 +28,7 @@ const Intro = () => {
           <motion.img
             src={foregroundImg}
             alt="Glovest Mobile"
-            className="relative z-10 w-full max-w-[400px] mx-auto mr-60"
+            className="relative z-10 w-full max-w-[400px] mx-auto sm:mr-60 mr-0"
             animate={{
               y: [200, 40, 200],
             }}

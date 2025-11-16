@@ -37,7 +37,7 @@ const JoinWaitlist = () => {
     <motion.section
       className="w-full h-[350px] bg-[#1A1A1A] text-white rounded-2xl sm:rounded-3xl md:rounded-[2rem] 
       px-4 sm:px-8 md:px-16 py-12 sm:py-16 flex flex-col md:flex-row 
-      justify-between items-center gap-10 max-w-6xl mx-auto my-16 sm:my-20 overflow-hidden font-geist"
+      justify-between items-center gap-10 max-w-6xl mx-auto my-16 sm:my-20 overflow-hidden overflow-x-hidden font-geist"
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
@@ -65,7 +65,7 @@ const JoinWaitlist = () => {
           <div
             className="flex flex-row items-center 
             bg-[#646464] rounded-lg overflow-hidden 
-            w-full max-w-sm 
+            w-full max-w-full 
             mx-auto md:mx-0 transition-transform duration-300 hover:scale-[1.02]"
           >
             <input
