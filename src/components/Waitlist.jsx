@@ -35,7 +35,7 @@ const JoinWaitlist = () => {
 
   return (
     <motion.section
-      className="w-full h-[350px] bg-[#1A1A1A] text-white rounded-2xl sm:rounded-3xl md:rounded-[2rem] 
+      className="w-full h-[330px] bg-[#1A1A1A] text-white rounded-2xl sm:rounded-3xl md:rounded-[2rem] 
       px-4 sm:px-8 md:px-16 py-12 sm:py-16 flex flex-col md:flex-row 
       justify-between items-center gap-10 max-w-6xl mx-auto my-16 sm:my-20 overflow-hidden overflow-x-hidden font-geist"
       initial={{ opacity: 0, y: 60 }}

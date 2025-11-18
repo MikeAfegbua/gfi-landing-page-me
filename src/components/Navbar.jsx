@@ -50,7 +50,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Button */}
-        <div className="hidden sm:block">
+        {/*<div className="hidden sm:block">
           <motion.button
             whileHover={{ scale: 0.97 }}
             whileTap={{ scale: 0.95 }}
@@ -70,7 +70,7 @@ const Navbar = () => {
               }}
             />
           </motion.button>
-        </div>
+        </div> */}
 
         {/* Mobile Menu Button */}
         <div className="sm:hidden flex items-center">
@@ -99,7 +99,7 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
             className="sm:hidden bg-[#FFEBC7] border-t border-gray-300 shadow-md px-4 py-4"
           >
-            <motion.button
+            {/* <motion.button
               whileHover={{ scale: 0.97 }}
               whileTap={{ scale: 0.95 }}
               className="w-full flex items-center justify-center gap-2 bg-[#1C2024] text-white px-5 py-3 rounded-md font-medium text-sm transition-all duration-300 hover:bg-black"
@@ -117,7 +117,7 @@ const Navbar = () => {
                   ease: "easeInOut",
                 }}
               />
-            </motion.button>
+            </motion.button> */}
           </motion.div>
         )}
       </AnimatePresence>

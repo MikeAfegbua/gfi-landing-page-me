@@ -17,12 +17,15 @@
 html, body {
   @apply bg-white text-gray-900 scroll-smooth antialiased;
   overflow-x: hidden;
+  
 }
 
 
 
 .container {
   @apply max-w-7xl mx-auto px-2;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .section {

@@ -4,7 +4,7 @@ import SeamlessP2PImage1 from "../assets/images/seamlessptopimage1.png";
 import SeamlessP2PImage2 from "../assets/images/seamlessptopimage2.png";
 import SeamlessP2PImage3 from "../assets/images/seamlessptopimage3.png";
 
-{/* Import your flowered flag images */} 
+
 import FlagNG from "../assets/images/flowerflag1.png";
 import FlagKE from "../assets/images/flowerflag2.png";
 import FlagRU from "../assets/images/flowerflag3.png";
@@ -158,7 +158,7 @@ const Feature = () => {
               Seamless P2P
             </span>
 
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight text-gray-900 mb-3 tracking-tighter">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tighter text-gray-900 mb-3 tracking-tighter">
               Seamless <span className="text-[#A05A00]">P2P</span>
             </h3>
 
@@ -175,7 +175,7 @@ const Feature = () => {
                     alt={`avatar-${i}`}
                     whileHover={{ scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 200 }}
-                    className="w-[90px] sm:w-[110px] md:w-[120px] h-[90px] sm:h-[110px] md:h-[120px] rounded-full object-cover shadow-sm"
+                    className="w-[90px] sm:w-[110px] md:w-[120px] h-[90px] sm:h-[110px] md:h-[120px] rounded-none object-cover shadow-sm"
                   />
                 )
               )}
@@ -219,7 +219,7 @@ const Feature = () => {
                 </p>
               </motion.div>
 
-              {/* Purple transaction card — slightly slanted */}
+              {/* Purple transaction card */}
               <motion.div
                 initial={{ rotate: -4 }}
                 whileHover={{ rotate: 0, scale: 1.05 }}

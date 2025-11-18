@@ -63,15 +63,15 @@ const Intro = () => {
           </div>
 
           {/* Heading */}
-          <h2 className="md:text-3xl sm:text-base font-normal text-[#1C2024] mb-5 leading-tight">
+          <h2 className="md:text-3xl sm:text-base text-center font-semibold text-[#1C2024] mb-5 leading-tight">
+            Coming soon:{" "}<span className="text-[#1C2024] font-semibold ">Glovest</span>
+          </h2>
+          <h4 className="md:text-2xl sm:text-base text-center font-normal text-[#1C2024] mb-5 leading-tight">
             <span className="text-[#1C2024] font-semibold ">Glovest</span>{" "}
             by Global Financial Investment
-          </h2>
+          </h4>
 
           {/* Paragraphs */}
-          <p className="text-[#1C2024] text-sm md:text-base leading-relaxed mb-4">
-            <span className="font-semibold text-[#1C2024]">Coming Soon: Glovest</span>
-          </p>
           <p className="text-[#1C2024] text-sm sm:text-base leading-relaxed mb-4">
             Glovest is a next-generation financial app by <span className="font-semibold text-[#1C2024]">Global Financial Investment</span>,
             designed to simplify how poeple and businesses manage money across borders.
@@ -87,7 +87,7 @@ const Intro = () => {
            recieve, and grow your money — anywhere in the world.
           </p>
 
-          <p className="text-[#1C2024] text-sm sm:text-base leading-relaxed">
+          <p className="text-[#1C2024] text-center font-semibold text-sm sm:text-base leading-relaxed">
            Stay tuned — Glovest is coming soon!
           </p>
         </motion.div>
