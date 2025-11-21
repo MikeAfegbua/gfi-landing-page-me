@@ -5,7 +5,7 @@ import flagNG from "../assets/images/ngflag.png";
 import flagNA from "../assets/images/naflag.png";
 import flagRU from "../assets/images/ruflag.png";
 import flagZA from "../assets/images/zaflag.png";
-import centerPattern from "../assets/images/herobgpattern.png"; // 🌀 Add this line
+import centerPattern from "../assets/images/herobgpattern.png";
 import { joinWaitlist } from "../services/waitlistService";
 
 const Hero = () => {
