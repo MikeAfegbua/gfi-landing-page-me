@@ -5,6 +5,7 @@ import Reviews from "../components/Reviews";
 import Waitlist from "../components/Waitlist";
 import ForEveryone from "../components/ForEveryone";
 import Intro from "../components/Introduction";
+import MeetTheTeam from "../components/MeetTheTeam";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <ForEveryone />
       <GettingStarted />
       <Reviews />
+      <MeetTheTeam />
       <Waitlist />
     </main>
   );
