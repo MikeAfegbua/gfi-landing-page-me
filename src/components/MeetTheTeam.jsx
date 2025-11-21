@@ -1,15 +1,15 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
-{/* Team images */}
+{/* Team images */ }
 import teamphoto from "../assets/images/team/teamcover.jpg";
-import productdesigner1 from "../assets/images/team/ujah.jpg";
-import productdesigner2 from "../assets/images/team/abigail.jpg";
-import graphicdesigner from "../assets/images/team/roose.jpg";
-import frontendengineer from "../assets/images/team/michael.jpg";
-import founder from "../assets/images/team/steff.jpg";
-import businessanalyst from "../assets/images/team/sidiki.jpg";
-import backenddeveloper from "../assets/images/team/anthony.jpg";
+import productdesigner1 from "../assets/images/team/Ujah.jpg";
+import productdesigner2 from "../assets/images/team/Abigail.jpg";
+import graphicdesigner from "../assets/images/team/Roose.jpg";
+import frontendengineer from "../assets/images/team/Michael.jpg";
+import founder from "../assets/images/team/Steff.jpg";
+import businessanalyst from "../assets/images/team/Sidiki.jpg";
+import backenddeveloper from "../assets/images/team/Anthony.jpg";
 
 const MeetTheTeam = () => {
   const slides = [
@@ -25,13 +25,13 @@ const MeetTheTeam = () => {
 
   const [activeIndex, setActiveIndex] = useState(0);
 
-  {/* Refs */}
+  {/* Refs */ }
   const desktopTrackRef = useRef(null);
   const mobileScrollRef = useRef(null);
   const isInteractingRef = useRef(false);
   const resumeTimeoutRef = useRef(null);
 
-  {/* Desktop Autoscroll */}
+  {/* Desktop Autoscroll */ }
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % slides.length);
@@ -40,7 +40,7 @@ const MeetTheTeam = () => {
     return () => clearInterval(interval);
   }, [slides.length]);
 
-  {/* Calculate pixel X offset for smooth transform */}
+  {/* Calculate pixel X offset for smooth transform */ }
   const getDesktopX = () => {
     const track = desktopTrackRef.current;
     if (!track) return 0;
@@ -49,7 +49,7 @@ const MeetTheTeam = () => {
     return -(activeIndex * slideWidth);
   };
 
-  {/* Mobile Autoscroll */}
+  {/* Mobile Autoscroll */ }
   useEffect(() => {
     const scrollContainer = mobileScrollRef.current;
     if (!scrollContainer) return;
