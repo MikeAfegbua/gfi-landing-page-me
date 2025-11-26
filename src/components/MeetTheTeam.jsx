@@ -134,12 +134,12 @@ const MeetTheTeam = () => {
         {slides.map((slide, i) => (
           <div
             key={i}
-            className="shrink-0 w-[75vw] rounded-2xl overflow-hidden shadow-md border border-gray-200"
+            className="shrink-0 w-[65vw] rounded-xl overflow-hidden shadow-md border border-gray-200"
           >
             <img
               src={slide.image}
               alt="Team Member"
-              className="w-full h-72 object-cover"
+              className="w-full h-full object-cover"
             />
           </div>
         ))}

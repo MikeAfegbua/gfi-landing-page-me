@@ -35,9 +35,9 @@ const JoinWaitlist = () => {
 
   return (
     <motion.section
-      className="w-full h-[330px] bg-[#1A1A1A] text-white rounded-2xl sm:rounded-3xl md:rounded-[2rem] 
+      className="w-full h-[330px] bg-[#1A1A1A] text-white rounded-none sm:rounded-3xl md:rounded-[2rem] 
       px-4 sm:px-8 md:px-16 py-12 sm:py-16 flex flex-col md:flex-row 
-      justify-between items-center gap-10 max-w-6xl mx-auto my-16 sm:my-20 overflow-hidden overflow-x-hidden font-geist"
+      justify-between items-center gap-10 max-w-6xl mx-auto my-8 sm:my-10 overflow-hidden overflow-x-hidden font-geist"
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
@@ -126,20 +126,21 @@ const JoinWaitlist = () => {
 
       {/* Right Side Image */}
       <motion.div
-        className="flex-1 flex justify-center md:justify-end mt-[65px]"
-        initial={{ opacity: 0, x: 40 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.3, duration: 0.7 }}
-      >
-        <motion.img
-          src={WaitlistPhone}
-          alt="App preview"
-          className="w-[200px] sm:w-[260px] md:w-[340px] object-contain"
-          whileHover={{ scale: 1.05, rotate: 1 }}
-          transition={{ type: "spring", stiffness: 120 }}
-        />
-      </motion.div>
+  className="hidden md:flex flex-1 justify-center md:justify-end mt-[65px]"
+  initial={{ opacity: 0, x: 40 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true }}
+  transition={{ delay: 0.3, duration: 0.7 }}
+>
+  <motion.img
+    src={WaitlistPhone}
+    alt="App preview"
+    className="w-[200px] sm:w-[260px] md:w-[340px] object-contain"
+    whileHover={{ scale: 1.05, rotate: 1 }}
+    transition={{ type: "spring", stiffness: 120 }}
+  />
+</motion.div>
+
     </motion.section>
   );
 };
