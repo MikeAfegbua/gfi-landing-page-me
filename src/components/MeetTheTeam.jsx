@@ -2,25 +2,26 @@ import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 {/* Team images */ }
-import teamphoto from "../assets/images/team/teamcover.jpg";
-import productdesigner1 from "../assets/images/team/Ujah.jpg";
-import productdesigner2 from "../assets/images/team/Abigail.jpg";
-import graphicdesigner from "../assets/images/team/Roose.jpg";
-import frontendengineer from "../assets/images/team/Michael.jpg";
-import founder from "../assets/images/team/Steff.jpg";
-import businessanalyst from "../assets/images/team/Sidiki.jpg";
-import backenddeveloper from "../assets/images/team/Anthony.jpg";
+import productdesigner1 from "../assets/images/team/Ujah.png";
+import productdesigner2 from "../assets/images/team/Abigail.png";
+import graphicdesigner from "../assets/images/team/Roose.png";
+import frontendengineer from "../assets/images/team/Michael.png";
+import founder from "../assets/images/team/Steff.png";
+import businessanalyst from "../assets/images/team/Sidiki.png";
+import backenddeveloper from "../assets/images/team/Emmanuel.png";
 
 const MeetTheTeam = () => {
   const slides = [
-    { image: teamphoto },
     { image: founder },
     { image: businessanalyst },
-    { image: frontendengineer },
-    { image: backenddeveloper },
     { image: productdesigner1 },
-    { image: productdesigner2 },
     { image: graphicdesigner },
+    { image: frontendengineer },
+    { image: productdesigner2 },
+    { image: backenddeveloper },
+    
+    
+    
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -85,61 +86,67 @@ const MeetTheTeam = () => {
     <section className="bg-white py-24 px-6 md:px-16 lg:px-32 overflow-hidden">
       <div className="max-w-6xl mx-auto text-center">
         <p className="text-[#AB6400] font-medium text-sm tracking-wide uppercase">
-          Our Team
+          Meet the Team
         </p>
         <h2 className="text-2xl md:text-4xl font-semibold text-[#1C2024] mt-2 mb-4 tracking-tighter">
-          Meet the Team
+          The people behind the product
         </h2>
+        <p className="text-gray-500 text-xs sm:text-sm max-w-2xl mx-auto">
+            A creative, curious crew building things we believe in together.
+          </p>
       </div>
 
       {/* Desktop Carousel */}
-      <div className="hidden md:flex justify-center">
-        <div className="relative w-full max-w-6xl overflow-hidden h-[500px]">
-          <motion.div
-            ref={desktopTrackRef}
-            className="flex gap-8"
-            animate={{
-              x: getDesktopX(),
-              opacity: [0.4, 1],
-            }}
-            transition={{
-              duration: 1.8,
-              ease: "easeInOut",
-            }}
-          >
-            {slides.concat(slides).map((slide, i) => (
+      <div className="hidden md:block">
+        <div className="max-w-5xl mx-auto mt-12">
+
+          {/* FIRST ROW — 4 images */}
+          <div className="flex justify-center gap-6">
+            {slides.slice(0, 4).map((slide, i) => (
               <div
                 key={i}
-                className="min-w-[33%] flex-shrink-0 rounded-2xl overflow-hidden shadow-lg"
+                className="relative flex-shrink-0 rounded-2xl overflow-hidden shadow-lg"
               >
                 <img
                   src={slide.image}
-                  alt="Team Member"
-                  className="w-full h-[450px] object-cover rounded-2xl"
+                  alt={slide.name}
+                  className="w-[270px] h-[350px] object-contain rounded-xl"
+                />
+                
+              </div>
+            ))}
+          </div>
+
+          {/* SECOND ROW — 3 images */}
+          <div className="flex justify-center gap-8 mt-10">
+            {slides.slice(4).map((slide, i) => (
+              <div
+                key={i}
+                className="relative flex-shrink-0 rounded-2xl overflow-hidden shadow-lg"
+              >
+                <img
+                  src={slide.image}
+                  alt={slide.name}
+                  className="w-[270px] h-[350px] object-contain rounded-xl"
                 />
               </div>
             ))}
-          </motion.div>
+          </div>
+
         </div>
       </div>
 
       {/* Mobile Carousel */}
-      <div
-        ref={mobileScrollRef}
-        className="md:hidden overflow-x-auto flex flex-nowrap gap-4 pr-6 mt-10 scrollbar-hide scroll-smooth"
-        onTouchStart={handleMobileTouch}
-        onTouchMove={handleMobileTouch}
-        onTouchEnd={handleMobileTouch}
-      >
+      <div className="md:hidden flex flex-col items-center gap-6 mt-10">
         {slides.map((slide, i) => (
           <div
             key={i}
-            className="shrink-0 w-[65vw] rounded-xl overflow-hidden shadow-md border border-gray-200"
+            className="relative rounded-2xl overflow-hidden shadow-md border border-gray-200"
           >
             <img
               src={slide.image}
-              alt="Team Member"
-              className="w-full h-full object-cover"
+              alt={slide.name}
+              className="w-[270px] h-[350px] object-contain rounded-md"
             />
           </div>
         ))}
