@@ -89,4 +89,5 @@ npm run lint
 
 ## Deployment
 
-The project is configured for **Vercel** with SPA fallback rewrites in `vercel.json`. Push to the connected branch to trigger automatic deploys.
+The project is configured for **Vercel** with SPA fallback rewrites in `vercel.json`. 
+Push to the connected branch to trigger automatic deploys.
